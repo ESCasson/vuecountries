@@ -2,7 +2,9 @@
   <div>
     <h1>Countries</h1>
     <div class="main-container">
-      <country-dropdown v-bind:countries='countries'></country-dropdown>
+      <!-- <countries-list v-bind:countries='countries'></countries-list> -->
+      <countries-search v-bind:countries='countries'></countries-search>
+      <!-- <country-dropdown v-bind:countries='countries'></country-dropdown> -->
       <country-detail v-bind:country='selectedCountry'></country-detail>
     </div>
   </div>
@@ -13,6 +15,7 @@ import CountriesList from './components/CountriesList.vue';
 import { eventBus } from './main.js'
 import CountryDetail from './components/countryDetail.vue';
 import CountryDropdown from './components/CountryDropdown.vue'
+import CountriesSearch from './components/countriesSearch.vue'
 
 export default {
   name: 'app',
@@ -35,7 +38,8 @@ export default {
   components: {
     "countries-list": CountriesList,
     "country-detail": CountryDetail,
-    "country-dropdown": CountryDropdown
+    "country-dropdown": CountryDropdown,
+    "countries-search": CountriesSearch
   }
 }
 </script>
